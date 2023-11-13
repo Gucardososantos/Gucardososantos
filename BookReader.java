@@ -20,6 +20,13 @@ public class sistemalivros {
 
         JLabel idadeLabel = new JLabel("Idade:");
         JTextField idadeField = new JTextField();
+        JLabel sexoLabel = new JLabel("Sexo:");
+        JComboBox<String> sexoComboBox = new JComboBox<>(new String[]{"", "Masculino", "Feminino"});
+
+        JLabel generoLabel = new JLabel("Gêneros dos Livros:");
+        JComboBox<String> generoComboBox1 = new JComboBox<>(new String[]{"", "Ação", "Romance", "Aventura", "Infantil", "Terror", "Estudos"});
+        JComboBox<String> generoComboBox2 = new JComboBox<>(new String[]{"", "Ação", "Romance", "Aventura", "Infantil", "Terror", "Estudos"}); 
+        
 
         JButton cadastrarUsuarioButton = new JButton("Cadastrar Usuário");
         cadastrarUsuarioButton.addActionListener(new ActionListener() {
@@ -32,6 +39,11 @@ public class sistemalivros {
 
                 nomeField.setText("");
                 idadeField.setText("");
+                panel.add(sexoLabel);
+                panel.add(sexoComboBox);
+                panel.add(generoLabel);
+                panel.add(generoComboBox1);
+                panel.add(generoComboBox2);
             }
 
             private void cadastrarUsuario(String nome, int idade) {
@@ -97,3 +109,4 @@ public class sistemalivros {
         }
     }
 }
+
