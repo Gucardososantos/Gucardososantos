@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sistema de Livros</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin: 10px 0;
+        }
+
+        .button-container {
+            text-align: center;
+        }
+
+        .books-list {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>BookReader</h1>
+
+        <div class="form-group">
+            <h2>Cadastro de Usuários:</h2>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome">
+            <label for="idade">data de nascimento:</label>
+            <input type="text" id="idade" name="idade">
+            <label for="sexo">sexo:</label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>----</option>
+                <option value="1">masculino</option>
+                <option value="2">feminino</option>
+              </select>
+              <label for="genero">gêneros dos livros:</label>
+              <select class="form-select" aria-label="Default select example">
+                <option selected>----</option>
+                <option value="1">ação</option>
+                <option value="2">romance</option>
+                <option value="3">aventura</option>
+                <option value="4">infantil</option>
+                <option value="5">terror</option>
+                <option value="6">estudos</option>
+              </select>
+              <select class="form-select" aria-label="Default select example">
+                <option selected>----</option>
+                <option value="1">ação</option>
+                <option value="2">romance</option>
+                <option value="3">aventura</option>
+                <option value="4">infantil</option>
+                <option value="5">terror</option>
+                <option value="6">estudos</option>
+              </select>
+            
+            <a class="botao"  href="ListaLivros.html">
+                <button onclick="cadastrarUsuario()">Cadastrar</button>
+                
+            </a>
+            
+        </div>
+        <div></div>
+
+    <script>
+        // Funções JavaScript para interagir com o sistema
+        function cadastrarUsuario() {
+        
+        }
+
+    </script>
+</body>
+</html>
