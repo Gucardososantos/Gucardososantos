@@ -30,3 +30,7 @@ CREATE TABLE avaliacao (
     livro_id INT NOT NULL,
     usuario_id INT NOT NULL,
 );
+
+insert UserAdm (UserAdm, senha) VALUES (gustavo, adm100800);
+INSERT usuarios (nome, data_nascimento, sexo, tipo_preferido) VALUES (samuel, 20, masculino, ação);
+INSERT livros (titulo, autor, genero, avaliacao) VALUES (star_wars, george_lucas, fantasia, 100);
