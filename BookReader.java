@@ -6,8 +6,13 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import javax.swing.*;
+import java.awt.*;
+import java.io.IOException;
+import java.net.URL;
 
 public class sistemalivros {
+
     public static void main(String[] args) {
         JFrame frame = new JFrame("Sistema de Livros");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -91,6 +96,7 @@ public class sistemalivros {
             String usuario = "seu_usuario";
             String senha = "sua_senha";
             Connection conn = DriverManager.getConnection(url, usuario, senha);
+            
 
             String query = "INSERT INTO livros (titulo, autor) VALUES (?, ?)";
             PreparedStatement stmt = conn.prepareStatement(query);
@@ -108,5 +114,39 @@ public class sistemalivros {
             JOptionPane.showMessageDialog(null, "Erro ao cadastrar livro");
         }
     }
+
+
+
+public class HTMLViewer extends JFrame {
+    public HTMLViewer() {
+        setTitle("HTMLViewer");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(400, 300);
+
+        JEditorPane editorPane = new JEditorPane();
+        editorPane.setEditable(false);
+
+        try {
+            URL url = new URL("C:\\Users\\gustavo.santos\\OneDrive\\BookReader\\BookReader.html");
+            editorPane.setPage(url);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        JScrollPane scrollPane = new JScrollPane(editorPane);
+
+        getContentPane().add(scrollPane, BorderLayout.CENTER);
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            HTMLViewer htmlViewer = new htmlViewer();
+            htmlViewer.setVisible(true);
+        });
+    }
+}
+
+
+
 }
 
